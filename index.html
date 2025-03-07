@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Chi!</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('https://png.pngtree.com/background/20210710/original/pngtree-cartoon-birthday-wishes-background-material-picture-image_1045341.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-top: 5vh;
+            font-size: 2.5em;
+            color: #ff69b4;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 1s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(-30px); opacity: 0; }
+            60% { transform: translateY(10px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        .container {
+            display: inline-block;
+            margin-top: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover { transform: scale(1.05); }
+
+        .teddy, .envelope {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .teddy:hover, .envelope:hover { transform: scale(1.1); }
+
+        .message {
+            font-size: 1.1em;
+            color: #333;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, My Chi! 🎉</h1>
+    <div class="container" onclick="launchSpecialConfetti()">
+        <img src="https://www.buildabear.co.uk/on/demandware.static/-/Sites-buildabear-master/default/dwe9c7c75f/75231211229614x20858015.jpg" alt="Purple Teddy Bear" class="teddy">
+    </div>
+    
+    <div class="container" onclick="toggleMessage()">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/764/712/original/purple-envelope-with-hearts-free-png.png" alt="Purple Envelope" class="envelope" id="envelope">
+    </div>
+    
+    <div class="message" id="message">
+        <p>happy birthday, my love, my chi!</p>
+        <p>i don’t even know where to start because there are so many things i want to say, but let me begin with this i am so incredibly grateful for you. from the moment i first messaged you, i had no idea that you would become the most important person in my life. i started by teasing and annoying you, but little did i know, you would become my greatest comfort, my safe place, and my heart’s home.</p>
+        <p>you’ve been there through my ups and downs, through my good days and my worst ones. you never left, never gave up on me, and never made me feel alone. you reminded me that love is real, that it’s not just something that hurts it’s something that heals. and that’s exactly what you did for me. you healed parts of me that i thought would always be broken.</p>
+        <p>even though we’re miles apart, i feel your love in everything. in your messages, in the way you laugh at my jokes even when you pretend to be annoyed, and in the way you never let the distance change what we have. i wish more than anything that i could be there with you today, holding you close, making sure you feel just how much you mean to me. but until that day comes, i want you to know this my heart is always with you. you are my person, my love, my everything.</p>
+        <p>so today, on your special day, i hope you feel nothing but happiness, love, and all the beautiful things you deserve. i hope you smile a lot, laugh until your cheeks hurt, and feel how much you are loved not just by me, but by everyone who is lucky enough to know you.</p>
+        <p>happy birthday, my love, my chi! i love you endlessly, and i can’t wait for the day i can finally celebrate with you in person. until then, i’ll keep annoying you from afar because let’s be real, it’s my way of showing love.</p>
+        <p>enjoy your day, my queen! ❤️</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/dist/confetti.browser.min.js"></script>
+    <script>
+        function toggleMessage() {
+            var message = document.getElementById("message");
+            if (message.style.display === "none" || message.style.display === "") {
+                message.style.display = "block";
+                launchSpecialConfetti();
+            } else {
+                message.style.display = "none";
+            }
+        }
+
+        function launchSpecialConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 150,
+                shapes: ['circle', 'square', 'heart'],
+                scalar: 1.5,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
